@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #navOne {
+        width: 100%;
+        height: 60px;
+        border: 1px solid black;
+        display: flex;
+        position: fixed;
+        z-index: 1;
+        background-color: gray;
+    }
+
+    #divOne {
+        justify-content: center;
+    }
+
+    #divTwo {
+        justify-content: space-evenly;
+    }
+
+    #divThree {
+        justify-content: space-evenly;
+    }
+
+    #divOne,
+    #divThree {
+        width: 20%;
+        height: inherit;
+        display: flex;
+        align-items: center;
+    }
+
+    #divTwo {
+        width: 60%;
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #divTwo>ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    #buttonOne,
+    #buttonTwo {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+    }
+
+    #buttonOne {
+        background-color: cadetblue;
+    }
+
+    #buttonTwo {
+        background-color: greenyellow;
+    }
+
+    #testDiv, #testDiv3, #testDiv5 {
+        width: 200px;
+        height: 200px;
+        background-color: aquamarine;
+        border: 1px solid black;
+    }
+
+    #testDiv3{
+        position: relative;
+        background-color: black !important;
+        top: 100px;
+        left: 200px;
+    }
+
+    #testDiv5{
+        position: absolute;
+        background-color: rosybrown !important;
+        top: 100px;
+        left: 200px;
+    }
+
+    #sectionOne{
+        border: 1px solid red;
+        /* position: relative; */
+        /* top: 60px; */
+    }
+    /* #sectionOne:first-child{
+        position: relative;
+    } */
+
+    #testFixed{
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        background-color: red;
+        border: 1px solid black;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        z-index: 2;
+    }
+
+    #sectionTwo{
+        width: 100%;
+        height: 400px;
+        background-color: greenyellow;
+        position: relative;
+        top: 500px;
+    }
+
+    #testSticky{
+        width: 300px;
+        height: 300px;
+        background-color: blueviolet;
+        border-radius: 100%;
+        position: sticky;
+        right: 0;
+        top: 0;
+        z-index: 2;
+    }
+</style>
+
+<body>
+    <nav id="navOne">
+        <div id="divOne">
+            <h1>Test Company</h1>
+        </div>
+        <div id="divTwo">
+            <ul>
+                <li>Home</li>
+                <li>About us</li>
+                <li>Contact us</li>
+                <li>Services</li>
+                <li>FAQs</li>
+                <li>Report a problem</li>
+            </ul>
+        </div>
+        <div id="divThree">
+            <button id="buttonOne">Sign up</button>
+            <button id="buttonTwo">Login</button>
+        </div>
+    </nav>
+
+    <section id="sectionOne">
+        <div id="testDiv"></div>
+        <div id="testDiv"></div>
+        <div id="testDiv3"></div>
+        <div id="testDiv"></div>
+        <div id="testDiv5"></div>
+        <div id="testDiv"></div>
+        <div id="testDiv"></div>
+        <div id="testDiv"></div>
+        <div id="testDiv"></div>
+        <div id="testDiv"></div>
+    </section>
+    <div id="testSticky"></div>
+
+    <div id="testFixed">
+
+    </div>
+
+    <section id="sectionTwo">
+
+    </section>
+</body>
+
+</html>

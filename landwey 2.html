@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    section {
+        width: 90%;
+        height: 500vh;
+        background-color: white;
+        margin: auto;
+    }
+
+    body {
+        background-color: #f3f3f3;
+    }
+
+    img {
+        height: 40px;
+        width: 150px;
+        margin-top: 20px;
+        /* margin-left: 85px; */
+    }
+
+    #navone {
+        width: 80%;
+        height: 100px;
+        margin: auto;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    ul {
+        width: 40%;
+        height: 50px;
+        /* border: 1px solid blue; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 18px;
+        font-family: sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    #divone {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 120px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+        height: 190px;
+    }
+
+    #hone {
+        margin-left: 80px;
+        font-family: sans-serif;
+        font-size: 50px;
+        transition: transform ease 3s;
+    }
+
+    #hone:hover {
+        transform: skewX(-45deg);
+    }
+
+    #pone {
+        padding-right: 100px;
+        font-family: sans-serif;
+        font-size: 20px;
+        padding-top: 40px;
+        color: rgba(0, 0, 0, 0.45);
+    }
+
+    #divtwo {
+        display: flex;
+        margin-top: 130px;
+    } 
+
+    #img2 {
+        margin-left: 60px;
+        width: 600px;
+        height: 350px;
+    }
+
+    #divthree {
+        margin-top: 19px;
+        background-color: #F2F2F2;
+        width: 37%;
+        height: 440px;
+    }
+
+    #buttonone {
+        margin-top: 30px;
+        margin-left: 85px;
+        background-color: black;
+        color: white;
+        width: 120px;
+        height: 40px;
+        font-family: sans-serif;
+        font-weight: bolder;
+        font-size: 15px;
+    }
+
+    #htwo {
+        margin-left: 85px;
+        margin-top: 10px;
+        font-family: sans-serif;
+        font-size: 30px;
+    }
+
+    #ptwo {
+        margin-left: 85px;
+        margin-top: 10px;
+        font-size: 25px;
+    }
+
+    #pthree {
+        margin-left: 85px;
+        margin-top: 20px;
+        font-size: 22px;
+    }
+
+    #buttontwo {
+        margin-top: 45px;
+        margin-left: 85px;
+        background-color: black;
+        color: white;
+        width: 200px;
+        height: 45px;
+        font-family: sans-serif;
+        font-weight: lighter;
+        font-size: 20px;
+    }
+
+    #divfour {
+        display: flex;
+        margin-top: 45px;
+    }
+
+    #divfive {
+        margin-top: 20px;
+        background-color: #F2F2F2;
+        width: 37%;
+        height: 440px;
+        margin-left: 60px;
+    }
+
+    #img3 {
+        width: 600px;
+        height: 350px;
+    }
+
+    #buttonthree {
+        margin-top: 30px;
+        margin-left: 85px;
+        background-color: black;
+        color: white;
+        width: 120px;
+        height: 40px;
+        font-family: sans-serif;
+        font-weight: bolder;
+        font-size: 15px;
+    }
+
+    #hthree {
+        margin-left: 85px;
+        margin-top: 10px;
+        font-family: sans-serif;
+        font-size: 30px;
+    }
+
+    #pfour {
+        margin-left: 85px;
+        margin-top: 10px;
+        font-size: 25px;
+    }
+
+    #pfive {
+        margin-left: 85px;
+        margin-top: 20px;
+        font-size: 22px;
+    }
+
+    #buttonfour {
+        margin-top: 45px;
+        margin-left: 85px;
+        background-color: black;
+        color: white;
+        width: 200px;
+        height: 45px;
+        font-family: sans-serif;
+        font-weight: lighter;
+        font-size: 20px;
+    }
+
+    #divsix {
+        display: flex;
+        margin-top: 100px;
+    }
+
+    #img4 {
+        margin-left: 60px;
+        width: 600px;
+        height: 350px;
+    }
+
+    #divseven {
+        margin-top: 19px;
+        background-color: #F2F2F2;
+        width: 37%;
+        height: 440px;
+    }
+
+    #buttonfive {
+        margin-top: 30px;
+        margin-left: 85px;
+        background-color: black;
+        color: white;
+        width: 120px;
+        height: 40px;
+        font-family: sans-serif;
+        font-weight: bolder;
+        font-size: 15px;
+    }
+
+    #hfour {
+        margin-left: 85px;
+        margin-top: 10px;
+        font-family: sans-serif;
+        font-size: 30px;
+    }
+
+    #psix {
+        margin-left: 85px;
+        margin-top: 10px;
+        font-size: 25px;
+    }
+
+    #pseven {
+        margin-left: 85px;
+        margin-top: 20px;
+        font-size: 22px;
+    }
+
+    #buttonsix {
+        margin-top: 20px;
+        margin-left: 85px;
+        background-color: black;
+        color: white;
+        width: 200px;
+        height: 45px;
+        font-family: sans-serif;
+        font-weight: lighter;
+        font-size: 20px;
+    }
+
+    #diveight {
+        display: flex;
+        margin-top: 45px;
+    }
+
+    #divnine {
+        margin-top: 20px;
+        background-color: #F2F2F2;
+        width: 37%;
+        height: 440px;
+        margin-left: 60px;
+    }
+
+    #img5 {
+        width: 600px;
+        height: 350px;
+    }
+
+    #buttonseven {
+        margin-top: 30px;
+        margin-left: 85px;
+        background-color: black;
+        color: white;
+        width: 120px;
+        height: 40px;
+        font-family: sans-serif;
+        font-weight: bolder;
+        font-size: 15px;
+    }
+
+    #hfive {
+        margin-left: 85px;
+        margin-top: 10px;
+        font-family: sans-serif;
+        font-size: 30px;
+    }
+
+    #peight {
+        margin-left: 85px;
+        margin-top: 10px;
+        font-size: 25px;
+    }
+
+    #pnine {
+        margin-left: 85px;
+        margin-top: 20px;
+        font-size: 22px;
+    }
+
+    #buttoneight {
+        margin-top: 25px;
+        margin-left: 85px;
+        background-color: black;
+        color: white;
+        width: 200px;
+        height: 45px;
+        font-family: sans-serif;
+        font-weight: lighter;
+        font-size: 20px;
+    }
+
+    #footer {
+        margin-top: 60px;
+        background-color: black;
+        height: 400px;
+    }
+
+    #navtwo {
+        font-weight: lighter;
+        font-size: 18px;
+        font-family: sans-serif;
+        padding-left: 80px;
+        padding-top: 130px;
+        color: white;
+        display: flex;
+    }
+
+    #fh2 {
+        padding-left: 150px;
+    }
+
+    #fh3 {
+        padding-left: 60px;
+    }
+
+    #fh4 {
+        padding-left: 150px;
+    }
+
+    #fdiv1 {
+        font-weight: lighter;
+        padding-left: 80px;
+        padding-top: 30px;
+        display: flex;
+        color: rgba(124, 124, 124);
+        font-family: sans-serif;
+        font-size: 15px;
+    }
+
+    #fp2 {
+        padding-left: 137px;
+    }
+
+    #fp3 {
+        padding-left: 190px;
+    }
+
+    #fp4 {
+        padding-left: 190px;
+    }
+
+    #fdiv2 {
+        font-weight: lighter;
+        font-family: sans-serif;
+        font-size: 15px;
+        padding-left: 80px;
+        padding-top: 20px;
+        color: rgba(124, 124, 124);
+        display: flex;
+    }
+    #fp5 {
+        padding-top: 5px;
+    }
+    #fp6 {
+        padding-left: 56px;
+    }
+    #fp7 {
+        padding-left: 91px;
+    }
+    #fp8 {
+        padding-left:94px;
+    }
+
+    #fdiv3 {
+        font-size: 15px;
+        font-family: sans-serif;
+        display: flex;
+        padding-left: 79px;
+        color: rgba(124, 124, 124);
+    }
+    #p9 {
+        padding-top: 5px;
+    }
+    #fp9 {
+        padding-left: 41px;
+        padding-top: 15px;
+    }
+    #fp10 {
+        padding-top: 15px;
+        padding-left: 170px;
+    }
+    #fp11 {
+        padding-top: 15px;
+        padding-left: 159px;
+    }
+
+    #fdiv4 {
+        padding-left: 80px;
+        padding-top: 20px;
+        font-family: sans-serif;
+        font-size: 15px;
+        display: flex;
+        color: rgba(124, 124, 124)
+    }
+    #fp13 {
+        padding-left: 666px;
+    }
+</style>
+<body>
+    <section>
+        <nav id="navone">
+            <img src="https://landwey.ng/wp-content/uploads/2023/12/logo-main-black.png" alt="">
+            <ul>
+                <li>Our Projects</li>
+                <li>Schedule an Inspection</li>
+                <li>About</li>
+            </ul>
+        </nav>
+
+        <div id="divone">
+            <h1 id="hone">Discover Your <br> Perfect Plot</h1>
+            <p id="pone">Landwey is building new communities in lagos with beautiful, <br> 
+            natural landscapes with premium amenities. Our vibrant, award- <br>
+        winning, projects appeal to all lifestyles and boost some of green <br>
+    spaces.</p>
+        </div>
+
+        <div id="divtwo">
+            <img id="img2" src="https://landwey.ng/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-17-at-12.16.00-PM.jpeg" alt="">
+            <div id="divthree">
+                <button id="buttonone">NOW SELLING</button>
+                <h1 id="htwo">Lakowe Country <br> reserve</h1>
+                <P id="ptwo">LAKOWE, LEKKI</P>
+                <P id="pthree">Introducing lakowe <br> country reserve, where <br> modern living seamlessly <br>
+                merges with the tranquility <br> of nature...</P>
+                <button id="buttontwo">view property</button>
+            </div>
+        </div>
+
+        <div id="divfour">
+            <div id="divfive">
+                <button id="buttonthree">NOW SELLING</button>
+                <h1 id="hthree">Coastal town</h1>
+                <P id="pfour">IBEJU LEKKI</P>
+                <P id="pfive">Seated in the heart of <br> Ibeju-lekki, Coastal Town <br> offers you the iconic living,<br>
+                with the best of luxury to <br> give you an unforgettable <br> experience......</P>
+                <button id="buttonfour">view property</button>
+            </div>
+            <img id="img3" src="https://landwey.ng/wp-content/uploads/2023/12/coastaltowb.jpg" alt="">
+        </div> 
+        
+        <div id="divsix">
+            <img id="img4" src="https://landwey.ng/wp-content/uploads/2024/01/FCD2.jpg" alt="">
+            <div id="divseven">
+                <button id="buttonfive">NOW SELLING</button>
+                <h1 id="hfour">Future city - <br> district 2</h1>
+                <P id="psix">EPE</P>
+                <P id="pseven">District 2 offers you the <br> iconic living, with the best <br> of luxury to give you an <br>
+                unforgettable experience, <br> lavishing you with the <br> ultimate.....</P>
+                <button id="buttonsix">view property</button>
+            </div>
+        </div>
+
+        <div id="diveight">
+            <div id="divnine">
+                <button id="buttonseven">NOW SELLING</button>
+                <h1 id="hfive">Urban Prime 3</h1>
+                <P id="peight">Ogombo Road, <br> Ajah</P>
+                <P id="pnine">You get to live in Lagos <br> and yet away from it. The <br> Urban Prime 3 is a tranquil<br>
+                enviroment that is close <br> to nature yet accessible <br> from Lekki Epe Expressway..</P>
+                <button id="buttoneight">view property</button>
+            </div>
+            <img id="img5" src="https://landwey.ng/wp-content/uploads/2024/01/urban-prime-3.jpg" alt="">
+        </div> 
+
+        <footer id="footer">
+            <nav id="navtwo">
+                <h1 id="fh1">Head Office</h1>
+                <h1 id="fh2">Featured Properties</h1>
+                <h1 id="fh3">Company</h1>
+                <h1 id="fh4">Socials</h1>
+            </nav>
+            <div id="fdiv1">
+                <p id="fp1">+234 906 562 5919</p>
+                <p id="fp2">Isimi lagos</p>
+                <p id="fp3">About us</p>
+                <p id="fp4">Instagram</p>
+            </div>
+            <div id="fdiv2">
+                <p id="fp5">Km 42, Lekki-Epe Express way,</p>
+                <p id="fp6">Lakowe Country Reserve</p>
+                <p id="fp7">Schedule an Inspection</p>
+                <p id="fp8">Youtube</p>
+            </div>
+            <div id="fdiv3">
+                <p id="p9">Oko-Ado, Sangotedo, ajah, Lagos</p>
+                <p id="fp9">Coastal Town</p>
+                <p id="fp10">Privacy Policy</p>
+                <p id="fp11">Linkedln</p>
+            </div>
+            <div id="fdiv4">
+                <p id="fp12">info@landwey.ng</p>
+                <p id="fp13">X</p>
+            </div>
+        </footer>
+    </section>  
+</body>
+</html>

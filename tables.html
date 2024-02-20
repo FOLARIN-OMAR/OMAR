@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    table, thead, tr, th, tbody, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    #table2 {
+        width: 200px;
+        height: 200px;
+    }
+</style>    
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>S/N</th>
+                <th>name</th>
+                <th>G/F</th>
+                <th>GA</th>
+                <th>G/D</th>
+                <th>points</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>liverpool</td>
+                <td>43</td>
+                <td>18</td>
+                <td>25</td>
+                <td>45</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>aston villa</td>
+                <td>43</td>
+                <td>27</td>
+                <td>16</td>
+                <td>42</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>man city</td>
+                <td>45</td>
+                <td>21</td>
+                <td>24</td>
+                <td>40</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>arsenal</td>
+                <td>37</td>
+                <td>20</td>
+                <td>17</td>
+                <td>40</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>tottenham</td>
+                <td>42</td>
+                <td>29</td>
+                <td>13</td>
+                <td>39</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>westham</td>
+                <td>33</td>
+                <td>30</td>
+                <td>3</td>
+                <td>34</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+<table id="table2">
+    <tr>
+        <td style="background-color: green;" colspan="2">1</td>
+        <!-- <td>2</td> -->
+        <td style="background-color: blue;" rowspan="2">3</td>
+    </tr>
+    <tr>
+        <td style="background-color: indigo;" rowspan="2">4</td>
+        <td style="background-color: cadetblue;">5</td>
+        <!-- <td>6</td> -->
+    </tr>
+    <tr>
+        <!-- <td>7</td> -->
+        <td style="background-color: yellowgreen;" colspan="2">8</td>
+        <!-- <td>9</td> -->
+    </tr>
+</table>
+</body>
+</html>

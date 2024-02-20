@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Nav bar */
+
+    #navOne {
+        display: flex;
+        background-color: aquamarine;
+        height: 60px;
+    }
+
+    #divOne {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20%;
+    }
+
+    #divTwo {
+        width: 60%;
+        height: 100%;
+    }
+
+    #divThree {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 20%;
+    }
+
+    #divTwo>ul {
+        width: 100%;
+        display: flex;
+        list-style: none;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+
+    #divFour {
+        display: none;
+    }
+
+    button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: grey;
+        color: white;
+    }
+
+    @media (max-width:700px) {
+
+        #divOne,
+        #divTwo,
+        #divThree {
+            display: none;
+        }
+
+        #divFour {
+            display: inherit;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    /* body */
+    #sectionOne {
+        height: 400px;
+        display: flex;
+    }
+
+    #divFive {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid red;
+    }
+
+    #divSix {
+        width: 50%;
+        border: 1px solid red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #imgOne {
+        width: 50%;
+        height: 80%;
+        border-radius: 15px;
+    }
+
+    @media (max-width:700px) {
+        #sectionOne {
+            flex-direction: column;
+            height: fit-content;
+        }
+
+        #divFive,
+        #divSix {
+            width: 100%;
+            height: 300px;
+        }
+    }
+
+    #sectionTwo{
+        margin-top: 50px;
+    }
+
+    #sectionTwoChildOne,  #sectionTwoChildTwo{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+    }
+    
+
+    #sectionTwoChildOne > div {
+        width: 250px;
+        height: 250px;
+        background-color: aquamarine;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #sectionTwoChildTwo > div{
+        width: 250px;
+        height: 250px;
+        background-color: aquamarine;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #testImage {
+        width: 80%;
+        height: 80%;
+    }
+
+    @media (max-width:700px) {
+        #sectionTwoChildOne, #sectionTwoChildTwo{
+            flex-direction: column;
+            margin-bottom: 0;
+        }
+
+        #sectionTwoChildOne > div, #sectionTwoChildTwo > div{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        #testImage{
+            width: 50%;
+        }
+    }
+</style>
+
+<body>
+    <nav id="navOne">
+        <div id="divOne">
+            <h1>Test Company</h1>
+        </div>
+
+        <div id="divTwo">
+            <ul>
+                <li>Home</li>
+                <li>About us</li>
+                <li>Contact us</li>
+                <li>FAQs</li>
+                <li>Book a demo</li>
+                <li>Services</li>
+            </ul>
+        </div>
+
+        <div id="divThree">
+            <button>Signup</button>
+            <button>Login</button>
+        </div>
+
+        <div id="divFour">
+            <div id="">
+                <h1>Test Company</h1>
+            </div>
+            <div id="">
+                <button>Signup</button>
+                <button>Login</button>
+            </div>
+        </div>
+    </nav>
+    <section id="sectionOne">
+        <div id="divFive">
+            <h1>Welcome to Test Company</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, optio?</p>
+        </div>
+        <div id="divSix">
+            <img src="./sqi-level1/Images/JuiceWRLD.jpg" alt="" id="imgOne">
+        </div>
+    </section>
+
+    <section id="sectionTwo">
+        <div id="sectionTwoChildOne">
+            <div id="">
+                <img src="./sqi-level1/Images//bart.jpg" alt="" id="testImage">
+            </div>
+            <div id="">
+                <img src="./sqi-level1/Images//bart.jpg" alt="" id="testImage">
+            </div>
+            <div id="">
+                <img src="./sqi-level1/Images//bart.jpg" alt="" id="testImage">
+            </div>
+            <div id="">
+                <img src="./sqi-level1/Images//bart.jpg" alt="" id="testImage">
+            </div>
+        </div>
+        <div id="sectionTwoChildTwo">
+            <div id="">
+                <img src="./sqi-level1/Images//bart.jpg" alt="" id="testImage">
+            </div>
+            <div id="">
+                <img src="./sqi-level1/Images//bart.jpg" alt="" id="testImage">
+            </div>
+            <div id="">
+                <img src="./sqi-level1/Images//bart.jpg" alt="" id="testImage">
+            </div>
+            <div id="">
+                <img src="./sqi-level1/Images//bart.jpg" alt="" id="testImage">
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

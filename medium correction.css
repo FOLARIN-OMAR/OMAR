@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#navOne {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-color: #FFC017;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid black;
+    z-index: 1;
+}
+
+#divOneNav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 20%;
+    height: inherit;
+    padding-left: 80px;
+}
+
+#divTwoNav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 80%;
+    height: inherit;
+    padding-right: 80px;
+}
+
+#divTwoNav>ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}
+
+#buttonOne {
+    padding: 15px 25px;
+    color: white;
+    background-color: black;
+    border: 0;
+    border-radius: 30px;
+}
+
+#navTwo {
+    display: none;
+}
+
+@media (max-width:700px) {
+    #navOne {
+        display: none !important;
+    }
+
+    #navTwo {
+        position: fixed;
+        width: 100%;
+        height: 70px;
+        background-color: #FFC017;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid black;
+        z-index: 1;
+    }
+
+    #divOneNav2 {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 50%;
+        height: inherit;
+        padding-left: 50px;
+    }
+
+    #divTwoNav2 {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 50%;
+        height: inherit;
+        padding-right: 50px;
+    }
+
+    #divTwoNav2>button {
+        margin-left: 30px;
+    }
+}
+
+#sectionOne {
+    background-color: #FFC017;
+    height: 500px;
+    position: relative;
+    top: 71px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sectionOneDivOne {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    padding-left: 80px;
+}
+
+#sectionOneDivOne>h1 {
+    font-size: 90px;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+
+#sectionOneDivOne>p {
+    font-size: 25px;
+    font-weight: 500;
+    font-family: sans-serif;
+    margin-bottom: 25px;
+}
+
+#buttonTwo {
+    padding: 10px 45px;
+    color: white;
+    background-color: black;
+    border: 0;
+    border-radius: 30px;
+    margin-bottom: 25px;
+}
+
+#sectionOneDivTwo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+}
+
+#sectionOneDivTwo>img {
+    width: 50%;
+    height: 70%;
+}
+
+@media (max-width:700px) {
+    #sectionOneDivOne {
+        width: 100% !important;
+    }
+
+    #sectionOneDivTwo {
+        display: none !important;
+    }
+}
+
+#sectionTwo {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+#sectionTwo>div {
+    width: 25%;
+    height: 120px;
+    margin-bottom: 40px;
+}
+
+#trending {
+    padding-left: 30px;
+}
+
+#trending>i {
+    border: 1px solid black;
+    border-radius: 100%;
+}
+
+@media (max-width:700px) {
+
+    #sectionTwo>div {
+        width: 90%;
+    }
+}
+
+#sectionThree {
+    display: flex;
+    position: relative;
+    top: 70px;
+    width: 100%;
+    height: fit-content;
+}
+
+#sectionThreeDivOne {
+    width: 60%;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sectionThreeDivOne>div {
+    width: 80%;
+    height: 150px;
+    border: 1px solid red;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+#sectionThreeDivOne>div>div:first-child {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#sectionThreeDivOne>div>div:nth-child(2n) {
+    width: 30%;
+}
+
+#test2 {
+    width: 100%;
+    height: 100%;
+}
+
+#sectionThreeDivTwo {
+    width: 40%;
+    height: 200px;
+    background-color: blue;
+    border: 1px solid red;
+    position: sticky;
+    top: 70px;
+}
+
+@media (max-width:700px) {
+    #sectionThree{
+        flex-direction: column-reverse !important;
+    }
+
+    #sectionThreeDivOne{
+        width: 100% !important;
+    }
+
+    #sectionThreeDivTwo{
+        width: 100% !important;
+        position: static;
+    }
+}

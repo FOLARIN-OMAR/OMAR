@@ -1,0 +1,95 @@
+#testdiv {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    transition: transform ease 3s;
+}
+
+#testdiv:hover {
+    transform: rotate(45deg);
+}
+
+#testdiv1 {
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+    transition: transform ease 3s;
+}
+
+#testdiv1:hover {
+    transform: translate(100px, 200px);
+}
+
+#testdiv2 {
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+    transition: transform ease 3s;
+}
+
+#testdiv2:hover {
+    transform: scale(3, 4);
+}
+
+#testdiv3 {
+    width: 200px;
+    height: 200px;
+    background-color: yellowgreen;
+    transition: transform ease 3s;
+}
+
+#testdiv3:hover {
+    /* transform: skewY(45deg); */
+    transform: skewX(-45deg);
+}
+
+#section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#div1 {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    border-radius: 10px;
+    position: absolute;
+    animation-name: anyname;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+}
+
+@keyframes anyname {
+    0% {
+        top: 0;
+        left: 0;
+    }
+
+    25% {
+        top: 0;
+        left: 1150px;
+        background-color: lime;
+        border-radius: 100%;
+    }
+
+    50% {
+        top: 430px;
+        left: 1150px;
+        background-color: oldlace;
+        border-radius: 30%;
+    }
+
+    75% {
+        top: 430px;
+        left: 0;
+        background-color: gold;
+        border-radius: 20%;
+    }
+
+    100% {
+        top: 0;
+        left: 0;
+    }
+}

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    #navone {
+        display: flex;
+        justify-content: space-between;
+        /* border: 2px solid black; */
+    }
+
+    .mg1 {
+        width: 130px;
+        margin-left: 80px;
+    }
+
+    #divtwo {
+        margin-top: 30px;
+        margin-right: 2px;
+        font-size: 10px;
+    }
+
+    #buttonone {
+        background-color: white;
+        color: #2790C3;
+        margin-top: 20px;
+        margin-right: 2px;
+        width: 90px;
+        height: 35px;
+        border: 1px solid #2790C3;
+        border-radius: 100px
+        
+    }
+    #buttontwo{
+        background-color: #2790C3;
+        color: white;
+        margin-top: 20px;
+        margin-right: 80px;
+        width: 90px;
+        height: 35px;
+        border: 1px solid #2790C3;
+        border-radius: 100px;
+    }
+    #sectionone {
+        background-image: url(https://www.paypalobjects.com/webstatic/en_GB/mktg/wright/home/homepage-hero-1x.jpg);
+        margin-bottom: 20px;
+        height: 400px;
+        width: 100%;
+        background-repeat: no-repeat;
+    }
+
+    #divfour {
+        border: 0.1px solid black;
+        height: 398px;
+        color: white;
+        text-align: center;
+    }
+    #headone {
+        margin-top: 170px;
+        font-size: 50px;
+        font-family: sans-serif;
+        font-weight: 100;
+    }
+    #buttonthree {
+        background-color: #2790C3;
+        color: white;
+        width: 400px;
+        height: 50px;
+        font-size: 20px;
+        margin-top: 50px;
+        border: 1px solid #2790C3;
+        border-radius: 100px;
+    }
+    #pone {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+
+
+    #page2h1 {
+        margin-top: 90px;
+        text-align: center;
+        font-size: 45px;
+        font-family: sans-serif;
+        font-weight: 100;
+    }
+
+    .img2 {
+        width: 70px;
+        margin-left: 596px;
+        margin-top: 50px;
+    }
+
+    #page2p1 {
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 32px;
+        font-weight: 100;
+        margin-top: 10px;
+    }
+
+    #page2p2 {
+        text-align: center;
+        margin-top: 20px;
+        font-family: sans-serif;
+    }
+
+    #page2b1 {
+        width: 210px;
+        height: 55px;
+        margin-left: 525px;
+        margin-top: 30px;
+        border: 1px solid #2790C3;
+        border-radius: 100px;
+        background-color: white;
+        color: #2790C3;
+        font-size: 16px;
+    }
+
+
+
+    #page3h1 {
+        padding-top: 90px;
+        /* margin-top: 50px; */
+        text-align: center;  
+        font-family: sans-serif;
+        font-size: 40px;
+        font-weight: 100;      
+    }
+
+    #page3h2 {
+        text-align: center;
+        margin-top: 40px;
+        font-family: sans-serif;
+        text-decoration-line: underline;
+        text-underline-offset: 10px;
+    }
+
+    #page3d1 {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 50px;
+    }
+
+    #page3d2 {
+        display: flex;
+    }
+
+    #underdiv1 {
+        display: flex;
+    }
+
+    #underh1 {
+        margin-left: 120px;
+        font-size: 20px;
+        text-align: center;
+        /* text-indent: 10px; */
+        border: 1px solid black;
+        height: 23px;
+        width: 30px;   
+        border-radius: 100%;     
+    }
+
+    #underp1 {
+        margin-top: 2px;
+        margin-left: 20px;
+    }
+
+    #underdiv2 {
+        display: flex;
+    }
+
+    #underh2 {
+        margin-left: 90px;
+        font-size: 20px;
+        text-align: center;
+        border: 1px solid black;
+        height: 25px;
+        width: 40px;
+        border-radius: 100%;
+    }
+
+    #underp2 {
+        margin-left: 20px;
+        margin-top: 2px;
+    }
+
+    #underdiv3 {
+        display: flex;
+    }
+
+    #underh3 {
+        margin-left: 170px;
+        font-size: 20px;
+        text-align: center;
+        border: 1px solid black;
+        height: 25px;
+        width: 35px;
+        border-radius: 100%;
+    }
+
+    #underp3 {
+        margin-left: 20px;
+        margin-top: 2px;
+    }
+
+    #page3b1 {
+        width: 210px;
+        height: 55px;
+        margin-left: 530px;
+        margin-top: 50px;
+        border: 1px solid #2790C3;
+        border-radius: 100px;
+        background-color: white;
+        color: #2790C3;
+        font-size: 16px;
+    }
+
+    #sectiontwo {
+        margin-bottom: 50px;
+        height: 400px;
+    }
+
+    #sectionthree {
+        background-color: #F7F9FA;
+        width: 100%;
+        height:500px; 
+        /* border: 2px solid red; */
+        height: 660px;
+    }
+
+
+    #sectionfour {
+        background-color: #003087;
+        width: 100%;
+        height: 450px;
+        border: 2px solid #003087;
+    }
+
+    #page4h1 {
+        margin-top: 100px;
+        color: white;
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 40px;
+        font-weight: 100;
+    }
+
+    #page4div1 {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+    }
+
+    #page4head2 {
+        color: white;
+        margin-left: 50px;
+        margin-top: 50px;
+        font-family: sans-serif;
+    }
+
+    #page4p1 {
+        color: white;
+        margin-left: 50px;
+        margin-top: 5px;
+        font-family: sans-serif;
+        font-size: 14.5px;
+    }
+
+    #page4p2 {
+        color: white;
+        margin-left: 50px;
+        margin-top: 20px;
+        font-family: sans-serif;
+    }
+
+    #page4head3 {
+        color: white;
+        margin-top: 50px;
+        font-family: sans-serif;
+    }
+
+    #page4p3 {
+        color: white;
+        margin-right: 20px;
+        margin-top: 5px;
+        font-family: sans-serif;
+        font-size: 14.5px;
+    }
+
+    #page4p4 {
+        color: white;
+        margin-top: 45px;
+        font-family: sans-serif;
+    }
+
+
+
+    #sectionfive {
+        background-color: #F7F9FA;
+        width: 100%;
+        height: 300px;
+        border: 1px solid #F7F9FA;
+    }
+
+    #page5h1 {
+        text-align: center;
+        margin-top: 90px;
+        font-family: sans-serif;
+        font-weight: 100;
+        font-size: 30px;
+    }
+
+    #page5b1 {
+        margin-left: 450px;
+        margin-top: 27px;
+        width: 360px;
+        height: 50px;
+        font-size: 15px;
+        font-family: sans-serif;
+        font-weight: 100;
+        background-color: #0070BA;
+        color: white;
+        border: 1px solid #0070BA;
+        border-radius: 50px;
+    }
+
+
+
+    #page6d1 {
+        display: flex;
+        /* justify-content: space-between 10px; */
+        /* justify-content: space-evenly 10px; */
+        padding-top: 65px;
+        border-bottom: 1px solid black;
+        width: 1100px;
+        height: 30px;
+        margin: auto;
+    }
+
+    .img3 {
+        width: 25px;
+        height: 20px;
+        padding-left: 670px;
+        padding-top: 0px   
+    }
+
+    #page6h1 {
+        font-size: 15px;
+        font-family: sans-serif;
+        margin-left: 5px;
+    }
+    #page6h2 {
+        font-size: 15px;
+        font-family: sans-serif;
+        margin-left: 20px;
+    }
+    #page6h3 {
+        font-size: 15px;
+        font-family: sans-serif;
+        margin-left: 20px;
+    }
+    #page6h4 {
+        font-size: 15px;
+        font-family: sans-serif;
+        margin-left: 20px;
+    }
+    #page6h5 {
+        font-size: 15px;
+        font-family: sans-serif;
+        margin-left: 20px;
+    }
+    #page6h6 {
+        font-size: 15px;
+        font-family: sans-serif;
+        margin-left: 20px;
+    }
+
+    #page6d2 {
+        display: flex;
+        margin-top: 20px;
+        color: rgba(0, 0, 0, 0.45);
+        font-weight: lighter;
+    }
+    #page6h7 {
+        font-size: 15px;
+        font-family: sans-serif;
+        margin-left: 82px;
+    }
+    #page6h8 {
+        font-size: 15px;
+        font-family: sans-serif;
+        margin-left: 20px;
+    }
+    #page6h9 {
+        font-size: 15px;
+        font-family: sans-serif;
+        margin-left: 20px;
+    }
+    #page6h10 {
+        font-size: 15px;
+        font-family: sans-serif;
+        margin-left: 20px;
+    }
+    #pag6h11 {
+        font-size: 15px;
+        font-family: sans-serif;
+        margin-left: 260px;
+    }
+    #page6h12 {
+        font-size: 15px;
+        font-family: sans-serif;
+        margin-left: 20px;
+    }
+    #page6h13 {
+        font-size: 15px;
+        font-family: sans-serif;
+        margin-left: 20px;
+    }
+    #page6h14 {
+        font-size: 15px;
+        font-family: sans-serif;
+        margin-left: 20px;
+    }
+    #page6h15 {
+        font-size: 15px;
+        font-family: sans-serif;
+        margin-left: 20px;
+    }
+</style>
+<body>
+    <nav id="navone">
+        <div id="divone">
+            <img class="mg1" src="../../Downloads/logo.png" alt="">
+        </div>
+        <div id="divtwo">
+            <h1>PERSONAL <i class="fa-solid fa-chevron-down"></i></h1>
+            <div class="blueBackground_color">
+
+            </div>
+        </div>
+        <div id="divthree">
+            <button id="buttonone">Log in</button>
+            <button id="buttontwo">Sign up</button>
+        </div>
+    </nav>
+    <section id="sectionone">
+        <div id="divfour">
+            <h1 id="headone">The simpler, safer way to pay online.</h1>
+            <button id="buttonthree">sign up for free</button>
+            <p id="pone">own a business? open a business account</p>
+        </div>
+    </section>   
+</body>
+<script src="https://kit.fontawesome.com/9929391b60.js" crossorigin="anonymous"></script>
+
+
+
+<section id="sectiontwo">
+<h1 id="page2h1">PayPal is for everyone who pays online</h1>
+<div id="page2div1">
+    <img class="img2" src="https://www.paypalobjects.com/digitalassets/c/website/marketing/emea/gb/en/home/1-individuals.jpg" alt="">
+</div>
+<p id="page2p1">individuals</p>
+<p id="page2p2">Find out why we have more than 200M active accounts worldwide.</p>
+<button id="page2b1">Learn more</button>
+</section>
+
+
+
+<section id="sectionthree">
+<h1 id="page3h1">PayPal connects buyers and sellers</h1>
+<p id="page3h2">For buyers</p>
+<div id="page3d1">
+    <div>
+        <img src="https://www.paypalobjects.com/digitalassets/c/website/marketing/emea/shared/send-only-no-p2p/buyonline_browser1.png" alt=""> 
+    </div>
+    <div>
+        <img src="https://www.paypalobjects.com/digitalassets/c/website/marketing/emea/shared/send-only-no-p2p/buyonline_browser2.png" alt="">
+    </div>
+    <div>
+        <img src="https://www.paypalobjects.com/digitalassets/c/website/marketing/emea/shared/send-only-no-p2p/buyonline_browser3.png" alt="">
+    </div>
+</div>
+<div id="page3d2">
+    <div id="underdiv1">
+        <h1 id="underh1">1</h1>
+        <p id="underp1">Sign up with just an email address and password.</p>
+    </div>
+    <div id="underdiv2">
+        <h1 id="underh2">2</h1>
+        <p id="underp2">Securely add your cards.</p>
+    </div>
+    <div id="underdiv3">
+        <h1 id="underh3">3</h1>
+        <p id="underp3">Use the paypal button to check out with just an email address and password.</p>
+    </div>
+</div>
+<button id="page3b1">learn more</button>
+</section>
+
+
+
+<section id="sectionfour">
+<h1 id="page4h1">Join 200M active paypal accounts worldwide.</h1>
+<div id="page4div1">
+    <div>
+        <h1 id="page4head2">Safer and protected</h1>
+        <p id="page4p1">shop with peace of mind. we dont share your full financial information with</p>
+        <p id="page4p1">sellers. And paypal buyer protection covers your eligible purchases if they dont</p>
+        <p id="page4p1">show up or match their description</p>
+        <p id="page4p2">more about security</p>
+    </div>
+    <div>
+        <h1 id="page4head3">Mostly free, always upfront</h1>
+        <p id="page4p3">its free to open a paypal a paypal account and buy something using paypal unless it involves</p>
+        <p id="page4p3">a currency conversion.</p>
+        <p id="page4p4">more about fees</p>
+    </div>
+</div>
+</section>
+
+
+
+<section id="sectionfive">
+    <h1 id="page5h1">Sign up and get started.</h1>
+    <button id="page5b1">Get started</button>
+</section>
+
+
+
+<section id="sectionsix">
+    <div id="page6d1">
+        <h1 id="page6h1">Help</h1>
+        <h1 id="page6h2">Contact</h1>
+        <h1 id="page6h3">Fees</h1>
+        <h1 id="page6h4">Securities</h1>
+        <h1 id="page6h5">Features</h1>
+        <h1 id="page6h6">Shop</h1>
+        <img class="img3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Nigeria.svg/1200px-Flag_of_Nigeria.svg.png" alt="">
+    </div>
+    <div id="page6d2">
+        <h1 id="page6h7">About</h1>
+        <h1 id="page6h8">Newsroom</h1>
+        <h1 id="page6h9">Jobs</h1>
+        <h1 id="page6h10">Developers</h1>
+        <h1 id="pag6h11"> &#169 1999-2024 All rights reserved.</h1>
+        <h1 id="page6h12">Accessbility</h1>
+        <h1 id="page6h13">cookies</h1>
+        <h1 id="page6h14">Privacy</h1>
+        <h1 id="page6h15">Legal</h1>
+    </div>
+</section>
+<br>
+<br>
+<br>
+<br>
+</html>

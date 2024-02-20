@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        background-image: url(../../Pictures/pictures/20181209_101332.jpg);
+    }
+    #maindiv {
+        width: 100%;
+        height: fit-content;
+        background-color: rgba(255, 255, 255, 0.40);
+    }
+
+    #divone {
+        width: 400px;
+        height: 250px;
+        border: 1px solid black;
+        background-image: linear-gradient(to right, red, orange, yellow, green, blue,
+        indigo, violet);
+    }
+    
+    #divtwo {
+        width: 200px;
+        height: 200px;
+        background-image: linear-gradient(180deg, green, red);
+    }
+
+    #divthree {
+        width: 400px;
+        height: 200px;
+        background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(0, 255, 0, 1));
+    }
+
+    #divfour {
+        width: 400px;
+        height: 400px;
+        background-image: repeating-linear-gradient(red, blue 5%, indigo 5%);
+    }
+
+    #divfive {
+        width: 400px;
+        height: 200px;
+        background-image: radial-gradient(red, green, blue);
+    }
+
+    #divsix {
+        width: 400px;
+        height: 200px;
+        background-image: radial-gradient(circle, red 10%, green 30%, blue 60%);
+    }
+
+    #divseven {
+        width: 400px;
+        height: 400px;
+        background-image: conic-gradient(red, yellow, green);
+    }
+
+    #diveight {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-image: conic-gradient(grey 0deg, grey 60deg,
+        red 60deg, red 120deg,
+        yellow 120deg, yellow 180deg,
+        green 180deg, green 240deg,
+        blue 240deg, blue 300deg,
+        black 300deg, black 360deg);
+    }
+
+    #headone {
+        letter-spacing: 2px;
+        word-spacing: 5px;
+        /* padding: 20px; */
+        text-decoration: overline;
+        line-height: 50px;
+        font-family: cursive;
+        text-transform: uppercase;
+        -webkit-text-stroke: 1px red;
+        text-shadow: 5px 5px green;
+        text-indent: 100px;
+    }
+
+    #headtwo {
+        font-size: 60px;
+        text-transform: uppercase;
+        font-family: cursive;
+        text-align: center;
+        color: transparent;
+        background-image: url(../../Pictures/pictures/20190512_092209.jpg);
+        background-size: contain;
+        background-clip: text;
+    }
+
+
+</style>
+<body>
+    <div id="maindiv">
+        <h1 id="headone">Lorem ipsum dolor sit amet.</h1>
+        <h2 id="headtwo">omarfaruq</h2>
+        <div id="divone"></div>
+        <div id="divtwo"></div>
+        <div id="divthree"></div>
+        <div id="divfour"></div>
+        <div id="divfive"></div>
+        <div id="divsix"></div>
+        <div id="divseven"></div>
+        <div id="diveight"></div>
+    </div>
+</body>
+
+</html>

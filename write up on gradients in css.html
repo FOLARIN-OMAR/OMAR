@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1 style="text-align: center;">WRITE UP ON GRADIENTS IN CSS</h1>
+<P>CSS gradients let you display smooth transitions between two or more specified colours.</P>
+<p>CSS defines three types of gradients</p> 
+
+<ul>
+    <li>linear gradients [goes down/up/left/right/diagonally]</li>
+    <li>radial gradients [defined by their centre]</li>
+    <li>conic gradients [rotated around a centre point]</li>
+</ul>
+
+    <br>
+
+<h1>CSS LINEAR GRADIENTS</h1>
+<P>To create a linear gradients you must define at least two color stops. color stops are the colors 
+color stops are the colors you want to render smooth transitions among.you can also set a starting point
+and a direction [or an angle] along with the gradient effect.
+</P>
+
+<br>
+
+<h1>CSS RADIAL GRADIENTS</h1>
+<P>A radial gradient is defined by its centre.</P>
+<p>To create a radial gradient you must also define at least two color stops.</p>
+
+<br>
+
+<H1>CSS CONIC GRADIENTS</H1>
+<p>A conic gradient is a gradient with color transitions rotated around a centre point.</p>
+<p>to create a conic gradient you must define at least two colors.</p>
+
+<br>
+
+<p>examples of css linear gradient</p>
+<style>
+    #grad1 {
+        height: 200px;
+        background-image: linear-gradient(red,yellow);
+    }
+
+    #grad2 {
+        height: 200px;
+        background-image: linear-gradient(to right, red, yellow);
+        margin-top: 10px;
+    }
+</style>
+<div id="grad1"></div>
+<div id="grad2"></div>
+
+<br>
+
+<p>examples of css radial gradient</p>
+<style>
+    #grad3 {
+        height: 200px;
+        width: 200px;
+        /* background-color: red; */
+        background-image: radial-gradient(red, yellow, green);
+    }
+
+    #grad4 {
+        height: 200px;
+        width: 200px;
+        /* background-color: red; */
+        background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
+        margin-top: 10px;
+    }
+</style>
+<div id="grad3"></div>
+<div id="grad4"></div>
+
+</body>
+</html>

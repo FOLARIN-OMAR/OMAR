@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    div {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    body {
+        width: 100%;
+        background-image: url(https://miro.medium.com/v2/resize:fit:1400/1*5lyavS59mazOFnb55Z6znQ.png);
+    }
+
+    #head1 {
+        text-transform: uppercase;
+        color: red;
+        font-size: 70px;
+        font-family: sans-serif;
+        margin-left: 150px;
+    }
+
+    #b1 {
+        background-color: red;
+        width: 150px;
+        height: 55px;
+        margin-right: 150px;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+
+    main {
+        width: 1700px;
+        /* height: 700px; */
+        /* border: 1px solid red; */
+        margin: 40px auto;
+    }
+    #head2 {
+        color: white;
+        font-size: 100px;
+        margin-top: 350px;
+        text-align: center;
+    }
+    #p1 {
+        color: white;
+        font-size: 40px;
+        text-align: center;
+        margin-top: 30px;
+    }
+    #p2 {
+        color: white;
+        font-size: 40px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    #div2 {
+        height: 80px;
+        /* width: 100px; */
+        display: flex;
+        justify-content: space-between;
+    }
+    input[type] {
+        width: 500px;
+        background-color: black;
+        font-size: 25px;
+        text-indent: 15px;
+        margin-left: 470px;
+        border: 1px solid gray;
+        border-radius: 50px;
+    }
+    input[type]:focus-within{
+        color: white;
+    }
+    #b2 {
+        width: 300px;
+        background-color: red;
+        font-size: 40px;
+        margin-right: 400px;
+        font-weight: 600;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+
+</style>
+
+<body>
+    <div>
+        <h1 id="head1">netflix</h1>
+        <button id="b1" style="color: white; font-size: 25px;">sign in</button>
+    </div>
+    <main>
+        <h1 id="head2">unlimited movies, tv shows, and more</h1>
+        <p id="p1">watch anywhere. cancel anytime.</p>
+        <p id="p2">ready to watch? enter your email to create or restart your membership.</p>
+        <div id="div2">
+            <input type="Email" class="text" placeholder="Email address">
+            <button id="b2" style="color: white;">Get Started</button>
+        </div>
+    </main>   
+</body>
+</html>

@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#navone {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    background-color: teal;
+}
+
+#divone {
+    width: 20%;
+    height: 50px;
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+}
+
+#divtwo {
+    display: flex;
+    width: 60%;
+    height: 100%;
+}
+
+#divtwo > ul {
+    width: 100%;
+    display: inherit;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+#divthree {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: pink;
+    color: white;
+}
+
+#divfour {
+    display: none;
+}
+
+@media (max-width:700px) {
+    #divone, #divtwo, #divthree {
+        display: none;
+    }
+
+    #divfour {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+#sectionone {
+    height: 400px;
+    display: flex;
+}
+
+#divfive {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid pink;
+}
+
+#divsix {
+    width: 50%;
+    border: 1px solid pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#img1 {
+    width: 50%;
+    height: 80%;
+    border-radius: 15px;
+}
+
+@media (max-width:700px) {
+    #sectionone {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    #divfive, #divsix {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+#sectiontwo {
+    margin-top: 50px;
+}
+
+#sectionTwochildone, #sectiontwochildtwo {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+#sectionTwochildone > div {
+    width: 250px;
+    height: 250px;
+    background-color: aquamarine;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sectiontwochildtwo > div {
+    width: 250px;
+    height: 250px;
+    background-color: aquamarine;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#testimage {
+    width: 60%;
+    height: 60%;
+}
+
+@media (max-width:700px) {
+    #sectionTwochildone, #sectiontwochildtwo {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    #sectionTwochildone > div,  #sectiontwochildtwo > div {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #testimage {
+        width: 50%;
+    }
+}
