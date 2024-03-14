@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #sectionOne{
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+    }
+</style>
+<body>
+    <h1 id="h1"></h1>
+    <h2 class="h2"></h2>
+    <h2 id="h2"></h2>
+
+    <div id="divOne"></div>
+
+    <input placeholder="Enter your name" type="text" name="" id="inputOne">
+    <button onclick="displayName()">click here</button>
+    <p id="p1"></p>
+
+</body>
+<script>
+    // //DOM manipulation
+    // let h1 = document.getElementById("h1");
+    // // h1.innerHTML = "Our first DOM manipulation class.";
+    // h1.innerText = "This is our first DOM manipulation class";
+
+    // // let h2 = document.getElementsByClassName("h2");
+
+    // let h2 = document.querySelector(".h2")
+    // h2.innerHTML = "This is a text";
+
+    // let anotherH2 = document.querySelector("#h2");
+    // anotherH2.innerHTML = "test test test";
+
+    // let divOne = document.getElementById("divOne");
+    // divOne.style.backgroundColor = "green";
+    // divOne.style.width = "200px";
+    // divOne.style.height = "200px";
+
+    // let parent = document.body;
+    // let sectionOne = document.createElement("section");
+    // sectionOne.id = "sectionOne";
+    // parent.appendChild(sectionOne);
+
+    // //Assignment
+    // //Submit a write up on the differences between function statements and arrow functions in javascript.
+    // //Submit a write up om event listeners in JavaScript.
+    // function analyzeNum(){
+    //     let num = prompt("Enter your number: ")
+    //     num = Number(num)
+    //     num % 2 === 0 ? alert(`The number ${num} is an even number`) : alert(`The number ${num} is an odd number`);
+    // }
+
+    // analyzeNum()
+
+    // let num = prompt("Enter your number: ")
+    // num = Number(num)
+    // num % 2 === 0 ? alert(`The number ${num} is an even number`) : alert(`The number ${num} is an odd number`);
+
+    // const alertUserName = () => {
+    //     let userName = prompt("Enter your user name: ");
+    //     alert(`Welcome ${userName}`);
+    // }
+
+    // alertUserName()
+
+    // const alertFavoriteFood = function(){
+    //     let favoriteFood = prompt("Enter your favorite food: ")
+    //     alert(`Your favorite food ${favoriteFood} is a nice meal`)
+    //     console.log(window.name)
+    //     console.log(window)
+    // }
+    // alertFavoriteFood()
+
+        let p1 = document.getElementById("p1");
+        let inputOne = document.getElementById("inputOne");
+        function displayName(){
+            let name = inputOne.value;
+            p1.innerHTML = `Welcome ${name}. We are happy to see you`;
+            inputOne.value = ""
+        }
+
+    let testOne = 54;
+    function scoped(){
+        let testTwo = 105
+    }
+    console.log(testOne);
+    // console.log(testTwo);
+
+    function addNumOne(){
+        let testThree = 5 + 6;
+        return testThree;
+    }
+
+    let anotherNumOne = addNumOne();
+    console.log(anotherNumOne)
+
+    let mrOlayemi = {
+        name: "Olayemi",
+        age: 1111, 
+        color:"Blue"
+    }
+    console.log(mrOlayemi.name)
+
+    function addNumTwo(){
+        let addition = 15 + 5;
+        let subtraction = 15 - 5;
+        let division = 15 / 5;
+        let multiplication = 15 * 5;
+        let modulo = 15 % 5;
+        // return [addition, subtraction, division, multiplication, modulo]
+        return {
+            addition,
+            subtraction,
+            division,
+            multiplication,
+            modulo
+        }
+    }
+
+    // let numsOne = addNumTwo();
+    // let add = numsOne[0];
+    // console.log(add);
+
+    let numsTwo = addNumTwo();
+    console.log(numsTwo)
+
+    function parametrizeExample(a, b){
+        let addition = a + b;
+        let subtraction = a - b;
+        let division = a / b;
+        let multiplication = a * b;
+        let modulo = a % b;
+        // return [addition, subtraction, division, multiplication, modulo]
+        return {
+            addition,
+            subtraction,
+            division,
+            multiplication,
+            modulo
+        }
+    }
+    
+    let numsThree = parametrizeExample(24, 4);
+    console.log(numsThree);
+
+    function getDetails(name, age, color, food){
+        alert(`My name is ${name}. I am ${age} years old. My favorite color is ${color} and my favorite food is ${food}.`)
+    }
+    getDetails("Tawheed", 1112, "Blue", "Tuwo");
+
+
+
+    function checkNum(){
+        let num = prompt("Enter your number: ");
+        let num2 = Number(num);
+        if(num2 % 2 === 0){
+            alert(`${num2} is an even number`);
+        }else{
+            alert(`${num2} is an odd number`);
+        }
+    }
+    checkNum();
+
+
+
+    function checkName(){
+        let wole = "Wole";
+        let olayemi = "Olayemi";
+        let tawheed = "Tawheed";
+        let joseph = "Joseph";
+
+        let suppliedName = prompt("Enter your name: ")
+        if(suppliedName === wole){
+            alert(`Welcome ${suppliedName}. You are a true Chelsea fan.`)
+        }else if(suppliedName === olayemi){
+            alert(`Welcome ${suppliedName}. You are a true Chelsea fan.`)
+        } else if(suppliedName === tawheed){
+            alert(`Welcome ${suppliedName}. You are a true Chelsea fan.`)
+        } else if(suppliedName === joseph){
+            alert(`Welcome ${suppliedName}. You are a true Chelsea fan.`)
+        } else{
+            alert(`Gerrraheia ${suppliedName}. You have no taste.`) 
+        }
+    }
+    checkName();
+
+    function alertDay(){
+        let day = prompt("Enter your day of the week");
+
+        switch (day) {
+            case "Sunday":
+                alert(`${day} is the first day of the week`)
+                break;
+            case "Monday":
+                alert(`${day} is the second day of the week`)
+                break
+                case "Tuesday":
+                alert(`${day} is the third day of the week`)
+                break;
+            case "Wednesday":
+                alert(`${day} is the fourth day of the week`)
+                break
+                case "Thursday":
+                alert(`${day} is the fifth day of the week`)
+                break;
+            case "Friday":
+                alert(`${day} is the sixth day of the week`)
+                break
+            case "Saturday":
+                alert(`${day} is the seventh day of the week`)
+                break
+        
+            default:
+                alert(`${day} is not a day of the week`)
+                break;
+        }
+    }
+
+    alertDay();
+
+
+
+    // correction
+    // let num = prompt("Enter your number: ")
+    // num = Number(num)
+    // num % 2 === 0 ? alert(`The number ${num} is an even number`) : alert(`The number ${num} is an odd number`);
+
+    
+    //Operators in JS
+    // let test = 25;
+    // console.log(typeof test)
+
+    // //Binary operators
+    // //Assignment operators
+    // let test2 = "Tawheed";
+    // let firstAge = 1111;
+    // let secondAge = 2222;
+    // secondAge += firstAge; // Addition assignment operator assigns the sum of the variables on the LHS and RHS of the operator to the variable on the LHS
+    // console.log(secondAge)
+    // firstAge -= secondAge; // Subtraction assignment operator assigns the difference of the variables on the LHS and RHS of the operator to the variable on the LHS
+    // console.log(firstAge)
+
+    // let num1 = 45;
+    // let num2 = 3;
+    // num1 /= num2; // Division assignment operator assigns the division of the variables on the LHS and RHS of the operator to the variable on the LHS
+    // console.log(num1);
+
+    // let num3 = 77;
+    // let num4 = 81;
+
+    // num3 *= num4;
+    // console.log(num3)
+
+    // console.log(15 % 3) //Modulo operator returns the remainder of any division operation. % is the modulo operator
+    // let num5 = 77;
+    // let num6 = 5;
+    // num5 %= num6;
+    // console.log(num5);
+    // console.log(8**2) // ** is the exponent operator
+
+
+    //Logical operators
+    // console.log(true && false);
+    // console.log(false && false);
+    // console.log(true && true);
+
+    // console.log(true || false);
+    // console.log(true || true);
+    // console.log(false || false);
+
+    // console.log(!true);
+
+    //Comparison operators
+    // console.log(88 == 70);
+    // console.log(88 == "88");
+    // console.log(88 === "88"); // === compares data type and value while == compares only the value.
+    // console.log(7 - 4 !== 10);
+    // console.log(77 - 3 === 70 || 1 == "1");
+    // console.log(98 >= 65);
+
+
+    // ternary operator
+    // (77 < 8) ? alert("true") : alert("false");
+
+
+    // let myName = "Wole";
+    // let name = prompt("Enter your name");
+    
+    // name === myName ? alert("Welcome " + name + ". We are glad to have you here.") : alert(`I know you not ${name}. Bye bye`)
+
+
+    // let test1 = 30;
+    // var test2 = 50;
+    // const test3 = 45;
+    // // console.log(test1);
+
+    // test1 = 75;
+    // // console.log(test1);
+
+    // let myName = "Adewole";
+
+    // let ridwanUsesGlasses = true
+
+    // let num1 = 33;
+    // let num2 = num1;
+
+    // console.log(num1);
+    // console.log(num2);
+
+    // num2 = 45;
+    // console.log(num1);
+    // console.log(num2);
+
+    // //List of primitive data types
+    // // 1) Numbers
+    // // 2) Strings
+    // // 3) Booleans
+    // // 4) Null
+    // // 5) Undefined
+
+
+
+    // //List of non-primitive data types
+    // // 1) Arrays
+    // // 2) Objects
+
+    // let arr1 = [1,2,3,4,5];
+    // let arr2 = arr1;
+    // console.log(arr1);
+    // console.log(arr2);
+
+    // arr2.push(6);
+    // console.log(arr1);
+    // console.log(arr2);
+
+    // let nameArr = ["Wole", "Tawheed", "Segun", "Olayemi", "Ridwan", "Joseph", "Temitayo", "Faruq"]
+    // let temitayo = nameArr[6];
+    // nameArr[nameArr.length] = "Cyril";
+
+    // nameArr[5] = "Joe"
+
+    // console.log(nameArr)
+
+    // let testObj = {
+    //     name:"Wole",
+    //     age:1111,
+    //     color:"Blue",
+    //     food:"Beans"
+    // }
+    // console.log(testObj.name)
+    
+    // let testObj2 = testObj;
+    // console.log(testObj);
+    // console.log(testObj2);
+    
+    // testObj2["usesGlasses"] = true
+
+    // console.log(testObj)
+    // console.log(testObj.food)
+
+
+
+    // //Test
+    // let parent = document.body;
+    // let divOne = document.createElement("div")
+    // divOne.id = "divOne"
+    // divOne.style.width = "200px";
+    // divOne.style.height = "200px";
+    // divOne.style.backgroundColor = "Green"
+    // divOne.style.border = "1px solid black";
+
+    // parent.appendChild(divOne);
+
+    // let inputOne = document.createElement("input")
+    // inputOne.id = "inputOne";
+    // parent.appendChild(inputOne);
+
+    // let buttonOne = document.createElement("button")
+    // buttonOne.innerHTML = "Click me";
+
+    // function changeColor(){
+    //     let color = inputOne.value;
+    //     console.log(color)
+    //     divOne.style.backgroundColor = color
+    // }
+
+    // buttonOne.addEventListener("click", changeColor)
+    // parent.appendChild(buttonOne);
+
+    // ogunbaja07@gmail.com
+
+
+
+</script>
+</html>
