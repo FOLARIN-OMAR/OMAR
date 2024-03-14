@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #sectionOne {
+        background-color: pink;
+        width: 200px;
+        height: 200px;
+    }
+</style>
+
+<body>
+    <h1 id="h1"></h1>
+    <h2 class="h2"></h2>
+    <h2 id="h2"></h2>
+
+    <div id="divone"></div>
+</body>
+
+<script>
+    let h1 = document.getElementById("h1")
+    // h1.innerHTML = "our first dom manipulation class"
+    h1.innerText = "this is our first dom manipulation class"
+
+    // let h2 = document.getElementsByClassName("h2")
+
+    let h2 = document.querySelector(".h2")
+    h2.innerHTML = "this is a text";
+
+    let anotherh2 = document.querySelector("#h2")
+    anotherh2.innerHTML = "test test test";
+
+    let divone = document.getElementById("divone");
+    divone.style.backgroundColor = "green";
+    divone.style.width = "200px";
+    divone.style.height = "200px";
+
+
+    let parent = document.body
+    let sectionOne = document.createElement("section");
+    sectionOne.id = "sectionOne"
+    parent.appendChild(sectionOne);
+
+
+    function analyzeNum(){
+        let num = prompt("enter your number: ")
+        num = Number(num)
+        num % 2 === 0 ? alert(`the number ${num} is an even number`) : alert(`the number ${num} is an odd number`);
+    }
+
+    analyzeNum()
+
+
+    // arrow function
+    const alertUserName = () => {
+        let userName = prompt("Enter your username");
+        alert(`welcome ${userName}`);
+    }
+
+    alertUserName()
+
+
+    const alertFavoriteFood = function(){
+        let favoriteFood = prompt("Enter your favorite food: ")
+        alert(`Your favorite food ${favoriteFood} is a nice meal`)
+    }
+    alertFavoriteFood()
+
+
+
+
+    
+    // const alertFavoriteFood = function(){
+    //     let favoriteFood = prompt("Enter your favorite food: ")
+    //     alert(`Your favorite food ${favoriteFood} is a nice meal`)
+    //     // console.log(window.name)
+    //     // console.log(window)
+    // }
+    // alertFavoriteFood()
+</script>
+</html>
