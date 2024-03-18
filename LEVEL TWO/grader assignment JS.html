@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+</head>
+<body>
+    <h1>GRADING SYSYTEM</h1>
+    <input placeholder="input your score" type="number" id="input1">
+    <button id="btn">click here</button>
+    <p id="p1"></p>
+</body>
+
+<script>
+    let p1 = document.getElementById("p1")
+    let btn = document.getElementById("btn")
+    let show = document.getElementById("p1")
+
+    function displaynum() {
+        // let input1 = document.getElementById("input1").value
+         btn.addEventListener("click", () => {
+            let inp = input1.value
+            
+            // console.log(inp);
+       
+        if(inp >= 70 && inp <= 100){
+        // console.log("Excellent");
+        show.innerHTML = "Excellent" 
+
+        } else if(inp >= 60 <= 69) {
+        // console.log("Very good");
+        show.innerHTML = "Very good" 
+        
+        } else if (inp >= 50 <= 59){
+            // console.log("Good");
+            show.innerHTML = "Good" 
+
+        } else if (inp >= 40 <= 49) {
+            // console.log("Fail");
+            show.innerHTML = "Average" 
+
+        } else if(inp >= 30 <= 39){
+            show.innerHTML = "Fail" 
+
+        } else{
+            // console.log("drop out");
+            show.innerHTML = "Fail" 
+            
+        }
+
+
+        })
+  
+    }
+
+    displaynum()
+
+</script>
+</html>
+

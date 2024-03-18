@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <section class="mx-auto w-75 card shadow-lg border border-dark mt-5 p-5" style="height: 400px;">
+        <h6 class="text-center display-6 text-muted my-2">Enter your score</h6>
+
+        <input type="text" id="inputOne" class="my-2 form-control w-100 border border-dark" style="height: 50px;">
+
+        <button class="btn btn-dark my-2" style="width: fit-content;" onclick="checkGrade()">Display Grade</button>
+
+        <div class="my-2 card border border-dark mx-auto w-50 d-flex align-items-center justify-content-center" style="height: 30%;" id="displayDiv">
+
+        </div>
+    </section>
+</body>
+<script>
+    let inputOne = document.getElementById("inputOne");
+    let displayDiv = document.getElementById("displayDiv");
+    let num = 75;
+
+    function checkGrade(){
+        let grade = Number(inputOne.value)
+        if (grade > 100 || grade < 0) {
+            displayDiv.innerHTML = `Your score ${grade} is invalid.`
+        }else if(grade <= 100 && grade >= 70){
+            displayDiv.innerHTML = `Your score ${grade} is an excellent score with grade A.`
+        }else if(grade <= 69 && grade >= 60){
+            displayDiv.innerHTML = `Your score ${grade} is a good score with grade B.`
+        }else if(grade <= 59 && grade >= 50){
+            displayDiv.innerHTML = `Your score ${grade} is an average score with grade C.`
+        }else if(grade <= 49 && grade >= 45){
+            displayDiv.innerHTML = `Your score ${grade} is a fair score with grade D.`
+        }else if(grade <= 44 && grade >= 40){
+            displayDiv.innerHTML = `Your score ${grade} is a fair score with grade E.`
+        }else{
+            displayDiv.innerHTML = `Your score ${grade} warrants a grade of F.`
+        }
+        inputOne.value = ""
+    }
+</script>
+</html>
