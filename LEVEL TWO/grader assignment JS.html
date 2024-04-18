@@ -6,55 +6,160 @@
     <title>Document</title> 
 </head>
 <body>
-    <h1>GRADING SYSYTEM</h1>
-    <input placeholder="input your score" type="number" id="input1">
-    <button id="btn">click here</button>
-    <p id="p1"></p>
+    <section id="sec1" class="mx-auto">
+        <div id="div1">
+            <marquee behavior="" direction="">yes</marquee>
+            <h1 id="h1">GRADING SYSYTEM</h1>
+            <input placeholder="Enter your score" type="number" id="inpOne">
+            <button id="btn" onclick="Checkscore()">Check</button>
+            <div id="show">See Result Here</div>
+        </div>
+    </section>
 </body>
 
-<script>
-    let p1 = document.getElementById("p1")
-    let btn = document.getElementById("btn")
-    let show = document.getElementById("p1")
-
-    function displaynum() {
-        // let input1 = document.getElementById("input1").value
-         btn.addEventListener("click", () => {
-            let inp = input1.value
-            
-            // console.log(inp);
-       
-        if(inp >= 70 && inp <= 100){
-        // console.log("Excellent");
-        show.innerHTML = "Excellent" 
-
-        } else if(inp >= 60 <= 69) {
-        // console.log("Very good");
-        show.innerHTML = "Very good" 
-        
-        } else if (inp >= 50 <= 59){
-            // console.log("Good");
-            show.innerHTML = "Good" 
-
-        } else if (inp >= 40 <= 49) {
-            // console.log("Fail");
-            show.innerHTML = "Average" 
-
-        } else if(inp >= 30 <= 39){
-            show.innerHTML = "Fail" 
-
-        } else{
-            // console.log("drop out");
-            show.innerHTML = "Fail" 
-            
-        }
-
-
-        })
-  
+<style>
+    * {
+        margin: 0;
+        padding: 0;
     }
 
-    displaynum()
+    #sec1 {
+        background-image: linear-gradient(to right, black, blue);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #div1 {
+        background-image: linear-gradient(to right, blue, blueviolet);
+        width: 35%;
+        height: 300px;
+        box-shadow: -10px 10px 10px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    #h1 {
+        color: white;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    #btn {
+        width: 80px;
+        background-color: green;
+        color: white;
+    }
+
+    #btn:hover {
+        cursor: pointer;
+    }
+
+    #show {
+        width: 200px;
+        height: 30px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+    }
+</style>
+
+<script>
+    let inpOne = document.getElementById("inpOne");
+    let show = document.getElementById("show");
+
+    function Checkscore() {
+        let score = Number (inpOne.value);
+
+        if(score > 100 || score < 0) {
+            show.innerHTML = `your score ${score} is invalid.`
+
+        }else if(score <= 100 && score >= 70) {
+            show.innerHTML = `your score ${score} is A (Excellent).`
+
+        }else if(score <=69 && score >=60) {
+            show.innerHTML = `your score ${score} is B (Good).`
+
+        }else if(score <=59 && score >=50) {
+            show.innerHTML = `your score ${score} is C (Average).`
+
+        }else if(score <=49 && score >=45) {
+            show.innerHTML = `your score ${score} is D (Below Average).`
+
+        }else if(score <=44 && score >=40) {
+            show.innerHTML = `your score ${score} is E (Rubbish).`
+
+        }else{
+            show.innerHTML = `your score ${score} is F (Fucking Rubbish).`
+        }
+        inpOne.value = ""
+    } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // let p1 = document.getElementById("p1")
+    // let btn = document.getElementById("btn")
+    // let show = document.getElementById("p1")
+
+    // function displaynum() {
+    //     // let input1 = document.getElementById("input1").value
+    //      btn.addEventListener("click", () => {
+    //         let inp = input1.value
+            
+    //         // console.log(inp);
+       
+    //     if(inp >= 70 && inp <= 100){
+    //     // console.log("Excellent");
+    //     show.innerHTML = "Excellent" 
+
+    //     } else if(inp >= 60 <= 69) {
+    //     // console.log("Very good");
+    //     show.innerHTML = "Very good" 
+        
+    //     } else if (inp >= 50 <= 59){
+    //         // console.log("Good");
+    //         show.innerHTML = "Good" 
+
+    //     } else if (inp >= 40 <= 49) {
+    //         // console.log("Fail");
+    //         show.innerHTML = "Average" 
+
+    //     } else if(inp >= 30 <= 39){
+    //         show.innerHTML = "Fail" 
+
+    //     } else{
+    //         // console.log("drop out");
+    //         show.innerHTML = "Fail" 
+            
+    //     }
+
+
+    //     })
+  
+    // }
+
+    // displaynum()
 
 </script>
 </html>

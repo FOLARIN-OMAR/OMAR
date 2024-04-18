@@ -92,6 +92,10 @@
     color: #159AFF;
 }
 
+#span1 a {
+    text-decoration: none;
+}
+
 #mamadiv {
     text-align: center;
 }

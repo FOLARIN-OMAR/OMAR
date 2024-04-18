@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div id="divone">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div id="disdiv"></div>
+        <div id="div2">
+            <button id="buttonone" onclick="displayNumber()">AC</button>
+            <button id="buttonone" onclick="opeartorSign('+')">+/-</button>
+            <button id="buttonone" onclick="opeartorSign('%')">%</button>
+            <button id="buttonone" onclick="opeartorSign('/')">/</button>
+        </div>
+
+        <div>
+            <button id="buttontwo" onclick="displayNumber(7)">7</button>
+            <button id="buttontwo" onclick="displayNumber(8)">8</button>
+            <button id="buttontwo" onclick="displayNumber(9)">9</button>
+            <button id="buttontwo" onclick="opeartorSign('x')">x</button>
+        </div>
+
+        <div>
+            <button id="buttonthree" onclick="displayNumber(4)">4</button>
+            <button id="buttonthree" onclick="displayNumber(5)">5</button>
+            <button id="buttonthree" onclick="displayNumber(6)">6</button>
+            <button id="buttonthree" onclick="opeartorSign('-')">-</button>
+        </div>
+
+        <div>
+            <button id="buttonfour" onclick="displayNumber(1)">1</button>
+            <button id="buttonfour" onclick="displayNumber(2)">2</button>
+            <button id="buttonfour" onclick="displayNumber(3)">3</button>
+            <button id="buttonfour" onclick="opeartorSign('+')">+</button>
+        </div>
+
+        <div>
+            <button id="buttonfive" onclick="displayNumber(0)">0</button>
+            <button id="buttonfive" onclick="displayNumber('.')">.</button>
+            <button id="buttonfive" onclick="opeartor()">=</button>
+        </div>
+    </div>
+</body>
+
+
+
+<script>
+    let disdiv = document.getElementById("disdiv")
+
+    function displayNumber(params) {
+        disdiv.innerHTML += params
+    }
+
+    let sign
+
+    function opeartorSign(params) {
+        sign = params;
+        disdiv.innerHTML += params
+
+        // if (sign === +){
+
+        // }
+    }
+
+    function opeartor() {
+        let numOne = disdiv.innerHTML.value
+        let numTwo = disdiv.innerHTML.value
+
+        if (sign === "+") {
+            disdiv.innerHTML = Number(numOne) + Number(numTwo)
+
+        }else if (sign === '-') {
+            disdiv.innerHTML = Number(numOne) - Number(numTwo)
+
+        }else if (sign === '/') {
+            disdiv.innerHTML = Number(numOne) / Number(numTwo)
+
+        }else if (sign === 'x') {
+            disdiv.innerHTML = Number(numOne) * Number(numTwo)
+        }
+
+    }
+</script>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+
+    #maindiv {
+        background-color: rgb(61, 60, 60);
+        border: 1px solid white;
+        height: 65vh;
+        width: 30%;
+    }
+
+    #displayDiv {
+        width: 100%;
+        height: 35%;
+    }
+
+    #mainKeyDiv {
+        width: 100%;
+        height: 80%;
+    }
+
+    #functionDiv {
+        display: flex;
+        width: 100%;
+        height: 20%;
+    }
+
+    #key,
+    #key1 {
+        width: 25%;
+        height: 100%;
+        border: 1px solid rgb(61, 60, 60);
+        background-color: rgb(34, 33, 33);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #fxn {
+        width: 25%;
+        height: 100%;
+        border: 1px solid rgb(61, 60, 60);
+        background-color: rgb(34, 33, 33);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #Mdiv {
+        width: 100%;
+        height: 10%;
+        padding-left: 3px;
+        padding-right: 3px;
+        min-width: fit-content !important;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #MdivP {
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media (max-width:1000px) {
+        #maindiv {
+            width: 100% !important;
+        }
+    }
+</style>
+
+<body>
+    <div id="maindiv">
+        <div class="w-100 d-flex justify-content-between py-0 my-0" style="height: 1%;">
+            <p class="py-0">Calculator</p>
+            <div class="py-0 justify-content-end pe-2">
+                <i class="fa fa-minus" style="color: white;"></i>
+                <i class="fa fa-square-o" style="color: white;"></i>
+                <i class="fa fa-times" style="color: white;"></i>
+
+            </div>
+        </div>
+
+        <div id="displayDiv">
+            <div style="display: flex; align-items: center;" class="mt-4 w-100">
+                <h4 class="fa fa-bars mx-4" style="color: white;"></h4>
+                <h4>Standard</h4>
+            </div>
+            <div class="w-100 border border-light d-flex" style="height: 20%; flex-direction: row-reverse;"
+                id="display">
+
+            </div>
+            <div class="w-100 d-flex border border-danger" style="height: 40%; flex-direction: row-reverse;"
+                id="display2">
+
+            </div>
+
+        </div>
+
+        <div id="Mdiv">
+            <p onclick="trig('sin')" id="MdivP">Sin</p>
+            <p onclick="trig('cos')" id="MdivP">Cos</p>
+            <p onclick="trig('tan')" id="MdivP">Tan</p>
+            <p onclick="trig('sec')" id="MdivP">Sec</p>
+            <p onclick="trig('cosec')" id="MdivP">Cosec</p>
+            <p onclick="trig('cot')" id="MdivP">Cot</p>
+        </div>
+
+        <div id="mainKeyDiv">
+            <div id="functionDiv" style="background-color: rgb(34, 33, 33);">
+                <button id="key">
+                    <p>%</p>
+                </button>
+                <button id="key">
+                    <p>√</p>
+                </button>
+                <button id="key">
+                    <p>x<sup>2</sup> </p>
+                </button>
+                <button id="fxn">
+                    <p>1/x</p>
+                </button>
+            </div>
+
+            <div id="functionDiv" style="background-color: rgb(34, 33, 33);">
+                <button id="key" onclick="">
+                    <p>CE</p>
+                </button>
+                <button id="key" onclick="">
+                    <p>C</p>
+                </button>
+                <button id="key">
+                    <p>^</p>
+                </button>
+                <button onclick="operatorSign('/')" id="fxn">
+                    <p>/</p>
+                </button>
+            </div>
+
+            <div id="functionDiv" style="background-color: black;">
+                <button onclick="displayNum(9)" id="key">
+                    <p>9</p>
+                </button>
+                <button onclick="displayNum(8)" id="key">
+                    <p>8</p>
+                </button>
+                <button onclick="displayNum(7)" id="key">
+                    <p>7</p>
+                </button>
+                <button onclick="operatorSign('x')" id="fxn" style="background-color: rgb(34, 33, 33);">
+                    <p>x</p>
+                </button>
+            </div>
+
+            <div id="functionDiv" style="background-color: black;">
+                <button onclick="displayNum(6)" id="key">
+                    <p>6</p>
+                </button>
+                <button onclick="displayNum(5)" id="key">
+                    <p>5</p>
+                </button>
+                <button onclick="displayNum(4)" id="key">
+                    <p>4</p>
+                </button>
+                <button onclick="operatorSign('-')" id="fxn" style="background-color: rgb(34, 33, 33);">
+                    <p>-</p>
+                </button>
+            </div>
+
+            <div id="functionDiv" style="background-color: black;">
+                <button onclick="displayNum(3)" id="key">
+                    <p>3</p>
+                </button>
+                <button onclick="displayNum(2)" id="key">
+                    <p>2</p>
+                </button>
+                <button onclick="displayNum(1)" id="key1">
+                    <p>1</p>
+                </button>
+                <button onclick="operatorSign('+')" id="fxn" style="background-color: rgb(34, 33, 33);">
+                    <p>+</p>
+                </button>
+            </div>
+
+            <div id="functionDiv" style="background-color: black;">
+                <button onclick="" id="key" style="background-color: rgb(34, 33, 33);" onclick="backspace()">
+                    <p>Backspace</p>
+                </button>
+                <button onclick="displayNum(0)" id="key">
+                    <p>0</p>
+                </button>
+                <button id="key" style="background-color: rgb(34, 33, 33);">
+                    <p>.</p>
+                </button>
+                <button onclick="operator()" id="key" style="background-color: rgb(34, 33, 33);">
+                    <p style="color: white;">=</p>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    let displayOne = document.getElementById("display")
+    let displayTwo = document.getElementById("display2")
+
+    function displayNum(params) {
+        displayTwo.innerHTML += params
+    }
+
+    let sign
+
+    function operatorSign(params) {
+        sign = params;
+        displayOne.innerHTML = displayTwo.innerHTML;
+        displayTwo.innerHTML = ""
+    }
+
+    function operator() {
+        let numOne = displayOne.innerHTML
+        let numTwo = displayTwo.innerHTML
+
+        if (sign === "+") {
+            displayTwo.innerHTML = Number(numOne) + Number(numTwo)
+        } else if( sign === '-'){
+            displayTwo.innerHTML = Number(numOne) - Number(numTwo)
+        } else if( sign === '/'){
+            displayTwo.innerHTML = Number(numOne) / Number(numTwo)
+        } else if( sign === 'x'){
+            displayTwo.innerHTML = Number(numOne) * Number(numTwo)
+        }
+    }
+
+    function trig(params){
+        let num = Number(displayTwo.innerHTML);
+        
+        displayOne.innerHTML = displayTwo.innerHTML ;
+
+        if(params === "sin"){
+            displayTwo.innerHTML = Math.sin(num);
+        }
+
+        if(params === "cos"){
+            displayTwo.innerHTML = Math.cos(num);
+        }
+
+        if(params === "tan"){
+            displayTwo.innerHTML = Math.tan(num);
+        }
+
+        if(params === "sec"){
+            displayTwo.innerHTML = Math.sec(num);
+        }
+
+        if(params === "cosec"){
+            displayTwo.innerHTML = Math.cosec(num);
+        }
+
+        if(params === "cot"){
+            displayTwo.innerHTML = Math.cot(num);
+        }
+    }
+</script>
+
+</html>

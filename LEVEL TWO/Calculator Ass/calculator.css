@@ -1,0 +1,20 @@
+#divone {
+    margin-left: 450px;
+    margin-top: 50px;
+    background-color: black;
+    width: 28%;
+    height: 500px;
+}
+
+#disdiv {
+    background-color: black;
+    border: 1px solid white;
+    margin-left: 60px;
+    color: white;
+    width: 60%;
+    height: 30px;
+}
+
+#div2 {
+    padding-top: 120px;
+}
